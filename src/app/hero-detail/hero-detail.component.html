@@ -1,0 +1,28 @@
+<div class="container-fluid" *ngIf="hero">
+  <div class="card" style="width: 18rem">
+    <div class="card-header">Featured</div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Name: {{ hero.name | uppercase }}</li>
+      <li *ngIf="hero.age" class="list-group-item">Age: {{ hero.age }}</li>
+      <li *ngIf="hero.type" class="list-group-item">Type: {{ hero.type }}</li>
+      <li class="list-group-item">
+        <label
+          >Change name:
+          <input [(ngModel)]="hero.name" placeholder="name" />
+        </label>
+      </li>
+    </ul>
+  </div>
+</div>
+<br>
+<div class="row">
+
+  <div class="col-lg-2">
+    <button class="btn btn-lg btn-primary" (click)=save()>save</button>
+  </div>
+  <div class="col-lg-4">
+    <button type="button" class="btn btn-lg btn-dark" (click)=goBack()>Back</button>
+  </div>
+</div>
+
+

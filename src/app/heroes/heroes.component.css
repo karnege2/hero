@@ -1,0 +1,36 @@
+.jumbotron {
+  background-color: bisque;
+  padding: 0px;
+  width: 150px;
+  border-radius: 10px 0 8px 0;
+}
+.jumbotron:hover,
+.selected {
+  background-color: burlywood;
+}
+
+li {
+  list-style: none;
+}
+
+#bk {
+  background-color: blueviolet;
+  padding: 20px 0px 5px 0;
+}
+#bg {
+  background-color: crimson;
+}
+
+.badge {
+  background-color: brown;
+  color: white;
+  margin: auto;
+  padding: 10px;
+  border-radius: 8px 0 0 0;
+
+}
+
+li a{
+  color: #000;
+  text-decoration: none;
+}

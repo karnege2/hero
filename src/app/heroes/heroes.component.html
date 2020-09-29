@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div id="bk">
+        <ul class="heroes">
+          <li class="jumbotron" *ngFor="let hero of heroes">
+            <a routerLink="/hero-detail/{{ hero.id }}">
+              <span class="badge">{{ hero.id }}</span> {{ hero.name }}
+            </a>
+            <button class="delete" title="delete hero" (click)="delete(hero)">
+              x
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-6" id="bg">
+      <br />
+      <div>
+        <label
+          >Hero name:
+          <input #heroName />
+        </label>
+        <!-- (click) passes input value to add() and then clears the input -->
+        <button (click)="add(heroName.value); heroName.value = ''">add</button>
+      </div>
+      <app-messages></app-messages>
+      <button type="button" class="btn btn-lg btn-dark" (click)="goBack()">
+        Back
+      </button>
+    </div>
+  </div>
+</div>
